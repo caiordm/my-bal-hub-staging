@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+:root {
+    --light-green: #00ffea;
+    --mid-green: #00b1a3;
+    --black: #000000;
+    --white: #ffffff;
+    --main-blue: #0035bb;
+    --light-gray: #dadada;
+    --gray: #cbcbcb;
+    --dark-gray: #a3a3a3;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
+.menu {
+    background-color: #0035bb;
+    width: 13rem;
+}
+
+.section1 {
+    margin: 2rem;
+}
+
+.section2 {
+    margin-bottom: 2rem; 
+    display: flex;
+}
+
+.section3 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 1rem;
+}
+
+.section2 h1 {
+    color: var(--mid-green);
+    font-weight: 800;
+    font-size: 28pt;
+}
+
+.newHistory {
+    width: 150px;
+    height: 150px;
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    transition: 0.25s;
+}
+
+.newHistory2 {
+    width: 150px;
+    height: 150px;
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    transition: 0.25s;
+}
+
+ion-icon {
+    font-size: 64px;
+    color: var(--dark-gray);
+}
+
+span {
+    color: var(--dark-gray);
+    font-size: 16pt;
+    font-family: 'Bebas Neue', cursive;
+}
+
+button {
+    border: solid 1px var(--dark-gray);
+}
+
+.newHistory:hover {
+    background-color: var(--gray);
+}
+
+.newHistory2:hover {
+    background-color: var(--gray);
+}

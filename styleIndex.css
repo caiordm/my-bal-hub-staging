@@ -5,6 +5,18 @@
     font-family: 'Big Shoulders Display', cursive;
 }
 
+:root {
+    --light-green: #00ffea;
+    --mid-green: #00b1a3;
+    --black: #000000;
+    --white: #ffffff;
+    --main-blue: #0035bb;
+    --light-gray: #dadada;
+    --gray: #cbcbcb;
+    --dark-gray: #a3a3a3;
+}
+
+
 body {
     min-height: 100vh;
     display: flex;
@@ -18,20 +30,20 @@ body {
     height: 100vh;
     width: 50%;
     background-image: linear-gradient(to right bottom, #0038d8, #0035bb, #00319d, #002b80, #002563);
-    color: #ffffff;
+    color: var(--white);
 }
 
 h2 {
-    font-size: 24pt;
+    font-size: 28pt;
 }
 
 .text-green {
-    color: #00ffea;
+    color: var(--light-green);
 }
 
 .contents h4 {
     max-width: 400px;
-    font-size: 14pt;
+    font-size: 18pt;
     margin-top: 2em;
     margin-bottom: 2rem;
 
@@ -68,7 +80,7 @@ form {
 form h3 {
     margin-top: 1rem;
     font-size: 20pt;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .inputs {
@@ -88,12 +100,12 @@ input {
 
 .alert {
     margin-bottom: 1rem;
-    color: #ffffff;
+    color: var(--white);
     font-family: 'Open Sans', sans-serif;
 }
 
 button {
-    background-color: #ffffff;
+    background-color: var(--white);
     border: none;
     border-radius: 20px;
     font-size: 16pt;
@@ -102,29 +114,29 @@ button {
 }
 
 a {
-    color: #ffffff;
+    color: var(--white);
     font-size: 16pt;
     text-decoration: none;
     font-weight: 600;
     width: 11rem;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid var(--white);
     transition: 0.25s ease-in-out;
 }
 
 a:hover {
-    border-bottom: 2px solid #000000;
-    color: #000000;
+    border-bottom: 2px solid var(--black);
+    color: var(--black);
 
 }
 
 input:focus {
-    outline: solid 1px #000000;
+    outline: solid 1px var(--black);
 }
 
 button:hover {
     border-radius: 4px;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--black);
+    color: var(--white);
     cursor: pointer;
 }
 
