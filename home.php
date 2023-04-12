@@ -31,21 +31,24 @@ while ($row = fgetcsv($dataUsers)) {
 </head>
 
 <body>
-    <div class="menu">dfvrtgtrf</div>
-    <div class="content">
-        <section class="section1">
-            <section class="section2">
-                <h1>Olá, <?= strtoupper($name) ?>!</h1>
+    <div class="main-container">
+        <div class="menu">dfvrtgtrf</div>
+        <div class="content">
+            <section class="section1">
+                <section class="section2">
+                    <h1>Olá, <?= strtoupper($name) ?>!</h1>
+                    <button id="creator" onclick="windowCreator()"> Criar História </button>
+                </section>
+                <section class="section3">
+                    <button id="my-button" class="newHistory">
+                        <ion-icon id="add-circle" name="add-circle"></ion-icon>
+                        <span>New history</span>
+                    </button>
+                </section>
             </section>
-            <section class="section3">
-                <button id="my-button" class="newHistory">
-                    <ion-icon id="add-circle" name="add-circle"></ion-icon>
-                    <span>New history</span>
-                </button>
-            </section>
-        </section>
+        </div>
     </div>
-    <script src="historys.js"></script>
+    <script src="./javascript/creator.js"></script>
 </body>
 
 </html>
