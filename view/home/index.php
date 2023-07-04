@@ -1,17 +1,11 @@
-<?php
+<?php 
 
-include 'config.php';
+session_start();
 
-## Puxei esse email do header que veio do add ou login;
+var_dump($_SESSION);
 
-$email = $_GET['email'];
-$dataUsers = fopen(USERS_DB, 'r');
+$name = $_SESSION["name"];
 
-while ($row = fgetcsv($dataUsers)) {
-    if ($row[0] == $email) {
-        list($email, $name, $password) = $row;
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +16,7 @@ while ($row = fgetcsv($dataUsers)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="styleHome.css">
+    <link rel="stylesheet" href="./styleHome.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&family=Bebas+Neue&display=swap&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
@@ -36,7 +30,7 @@ while ($row = fgetcsv($dataUsers)) {
         <div class="content">
             <section class="section1">
                 <section class="section2">
-                    <h1>Olá, <?= strtoupper($name) ?>!</h1>
+                    <h1>Olá, <?= $name ?>!</h1>
                     <button id="creator" onclick="windowCreator()"> Criar História </button>
                 </section>
                 <section class="section3">

@@ -14,6 +14,11 @@
     --light-gray: #dadada;
     --gray: #cbcbcb;
     --dark-gray: #a3a3a3;
+    --strong-green: #19d300;
+    --green-bg: rgba(163, 255, 129, 0.277);
+    --dark-gray: #a3a3a3;
+    --strong-red: #b62d2d;
+    --red-bg: #fbdada;
 }
 
 
@@ -98,12 +103,6 @@ input {
     font-family: 'Open Sans', sans-serif;
 }
 
-.alert {
-    margin-bottom: 1rem;
-    color: var(--white);
-    font-family: 'Open Sans', sans-serif;
-}
-
 button {
     background-color: var(--white);
     border: none;
@@ -133,6 +132,7 @@ input:focus {
     outline: solid 1px var(--black);
 }
 
+
 button:hover {
     border-radius: 4px;
     background-color: var(--black);
@@ -140,3 +140,26 @@ button:hover {
     cursor: pointer;
 }
 
+.alert {
+    display: flex;
+    gap: 0.4rem;
+    color: var(--strong-red);
+    font-weight: 700;
+    font-size: 13pt;
+    padding: 0.4rem;
+    background-color: var(--red-bg);
+    border: 2px solid var(--strong-red);
+    border-radius: 8px;
+}
+
+.success {
+    display: flex;
+    gap: 0.4rem;
+    color: var(--strong-green);
+    font-weight: 700;
+    font-size: 13pt;
+    padding: 0.4rem;
+    background-color: var(--green-bg);
+    border: 2px solid var(--strong-green);
+    border-radius: 8px;
+}
