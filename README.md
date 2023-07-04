@@ -5,11 +5,3 @@ Projeto pessoal para práticar HTML, CSS, PHP E JS. O intuito é apenas deixar '
 Para testar:
 
 - Abrir um servidor local PHP no diretório do projeto
-
-```bash
-
-php -S localhost:8000
-
-```
-
-Não cheguei a terminar, apenas comecei, pretendo prosseguir com o projeto.
