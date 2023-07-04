@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+:root {
+    --light-green: #00ffea;
+    --mid-green: #00b1a3;
+    --black: #000000;
+    --white: #ffffff;
+    --main-blue: #0035bb;
+    --light-gray: #dadada;
+    --gray: #cbcbcb;
+    --dark-gray: #a3a3a3;
+}
+
+body {
+    display: flex;
+}
+
+aside {
+    background-color: var(--main-blue);
+    width: 13rem;
+    height: 100vh;
+}
+
+
+.newHistory {
+    width: 150px;
+    height: 150px;
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    transition: 0.25s;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+button {
+    border: solid 1px var(--dark-gray);
+}
+
+.newHistory:hover {
+    background-color: var(--gray);
+}
