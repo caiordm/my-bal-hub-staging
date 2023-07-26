@@ -23,6 +23,7 @@ try {
         session_start();
         $_SESSION['auth'] = true;
         $_SESSION['name'] = $users["name"];
+        $_SESSION['userId'] = $users["id"];
         $_SESSION['email'] = $users["email"];
         $_SESSION['password'] = $users['password'];
         header('location: ../view/homepage');

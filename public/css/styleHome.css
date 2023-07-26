@@ -24,8 +24,89 @@ aside {
     background-color: var(--main-blue);
     width: 13rem;
     height: 100vh;
+    padding: 2rem;
 }
 
+aside h2 {
+    color: var(--white);
+    font-weight: 600;
+}
+
+main {
+    padding: 1.4rem 3rem;
+    width: 100%;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-main h1 {
+    color: var(--main-blue);
+}
+
+.header-main a {
+    padding: 0.6rem;
+    border: 2px solid var(--main-blue);
+    color: var(--main-blue);
+    font-size: 16pt;
+    font-weight: 600;
+    text-decoration: none;
+    transition: ease 0.2s;
+}
+
+.header-main a:hover {
+    background-color: var(--main-blue);
+    color: var(--white);
+    box-shadow: rgb(255, 255, 255) 10px -10px 0px -3px, var(--main-blue) 10px -10px
+}
+
+section {
+    padding: 2rem 0rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #fafafa;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 8px;
+
+    padding: 1rem;
+    max-width: 40%;
+    gap: 0.6rem;
+
+    text-decoration: none;
+}
+
+.card h3 {
+    color: var(--main-blue);
+    font-size: 18pt;
+}
+
+.card p {
+    color: var(--dark-gray);
+    font-size: 14pt;
+}
+
+.card span {
+    color: #0035bb;
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+.texts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+}
 
 .newHistory {
     width: 150px;

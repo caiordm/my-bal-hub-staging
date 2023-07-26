@@ -1,7 +1,24 @@
 <?php
 
+require_once('../../model/conexao.php');
+
 session_start();
 $name = $_SESSION["name"];
+$id = $_SESSION["userId"];
+
+try {
+
+    
+    $sql = "SELECT * FROM histories WHERE user_id = :id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+    
+    $histories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+} catch(PDOException $e) {
+    echo $e->getMessage();
+}
 
 ?>
 
@@ -18,10 +35,29 @@ $name = $_SESSION["name"];
 </head>
 <body>
     <aside>
-        <p>r233333de3</p>
+        <h2>Olá, <?= $name ?>!</h2>
     </aside>
     <main>
-
+        <div class="header-main">
+            <h1>Suas histórias</h1>
+            <a href="#">
+                <b>+</b> Nova História
+            </a>
+        </div>
+        <section>
+            <?php foreach($histories as $history): ?>
+            <a href="#" class="card">
+                <div class="texts">
+                    <h3><?= $history['title'] ?></h3>
+                    <p><?= $history['description'] ?></p>
+                </div>
+                <div class="infos">
+                    <span>Clube atual: <?= $history['current'] ?></span>
+                    <span>Início da carreira: <?= $history['begin'] ?></span>
+                </div>
+            </a>
+            <?php endforeach ?>
+        </section>
     </main>
 </body>
 </html>
